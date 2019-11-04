@@ -1,0 +1,1 @@
+https://blog.alura.com.br/lidando-com-datas-e-horarios-no-python/
