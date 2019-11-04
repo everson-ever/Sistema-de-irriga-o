@@ -15,6 +15,7 @@
 - Capturar Ip do usuário que está acessando o sistema **Implementação futura**
 - Pausar um acionamento automático e retornar quando deixar de ser pausado **Implementação futura**
 - Cadastrar um tempo padrão (opcional pois já há um tempo padrão geral) para desligar por válvula acionada manualmente **Implementação futura**
+- Na tela de 'agendamento' informar qual agendamento está em execução naquele momento, se este for o caso **Implementação futura**
 
 
 ## Desenvolvido com as tecnologias
