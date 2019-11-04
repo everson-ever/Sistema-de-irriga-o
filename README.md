@@ -43,7 +43,7 @@
 - Tela de Agendamentos
 <img src="https://github.com/EversonSilva9799/Sistema-de-irriga-o/blob/master/screenshot%20application/agendamentos.png" width="380">
 
--Tela de válvulas
+- Tela de válvulas
 <img src="https://github.com/EversonSilva9799/Sistema-de-irriga-o/blob/master/screenshot%20application/valvulas.png" width="380">
 
 - Tela de tempo padrão
