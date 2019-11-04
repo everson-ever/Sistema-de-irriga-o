@@ -1,6 +1,6 @@
 # Sistema de irrigação automatizado
 
-## Funcionalidades atual do sistema
+## Funcionalidades Atuais do Sistema ou a serem executadas
 - Cadastro de agendamentos **OK**
 - Deletar agendamentos **OK**
 - Editar um agendamento **OK**
