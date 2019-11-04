@@ -37,4 +37,4 @@
 
 
 ## Imagens da aplicação
-![](https://github.com/EversonSilva9799/Sistema-de-irriga-o/blob/master/screenshot%20application/agendamentos.png)
+![](https://github.com/EversonSilva9799/Sistema-de-irriga-o/blob/master/screenshot%20application/agendamentos.png | width=48)
