@@ -1,5 +1,18 @@
 # Sistema de irrigação automatizado
 
+## Andamento atual do sistema
+- Cadastro de agendamentos **OK**
+- Deletar agendamentos **OK**
+- Editar um agendamento **OK**
+- Ativar e Desativar Válvula automaticamente de acordo com o agendamento **OK**
+- Desativar um agendamento para não se ativado no horário agendado **OK**
+- Ativa e Desativar válvula manualmente **OK**
+- Tempo padrão para desligar uma válvula acionada manualmente editável **OK**
+- Gerar Log do acionamentos **OK**
+- Pesquisar nos logs (acionamentos do dia e entre datas) **OK**
+- Visualizar válvulas ativas **OK**
+
+
 ## Desenvolvido com as tecnologias
 - Raspberry pi 3
 - Python3
