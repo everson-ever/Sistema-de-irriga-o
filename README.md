@@ -8,7 +8,7 @@
 - Desativar um agendamento para não se ativado no horário agendado **OK**
 - Ativa e Desativar válvula manualmente **OK**
 - Tempo padrão para desligar uma válvula acionada manualmente editável **OK**
-- Gerar Log do acionamentos **OK**
+- Gerar Log dos acionamentos **OK**
 - Pesquisar nos logs (acionamentos do dia e entre datas) **OK**
 - Visualizar válvulas ativas **OK**
 
