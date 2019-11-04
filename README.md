@@ -5,12 +5,15 @@
 - Deletar agendamentos **OK**
 - Editar um agendamento **OK**
 - Ativar e Desativar Válvula automaticamente de acordo com o agendamento **OK**
-- Desativar um agendamento para não se ativado no horário agendado **OK**
-- Ativa e Desativar válvula manualmente **OK**
+- Desativar um agendamento para não ser ativado no horário agendado **OK**
+- Ativar e Desativar válvula manualmente **OK**
 - Tempo padrão para desligar uma válvula acionada manualmente editável **OK**
 - Gerar Log dos acionamentos **OK**
 - Pesquisar nos logs (acionamentos do dia e entre datas) **OK**
 - Visualizar válvulas ativas **OK**
+- Agendar valvulas para serem ligadas apenas em determinado dia **Implementação futura**
+- Capturar Ip do usuário que está acessando o sistema **Implementação futura**
+- Pausar um acionamento automático e retornar quando deixar de ser pausado **Implementação futura**
 
 
 ## Desenvolvido com as tecnologias
