@@ -15,10 +15,10 @@
 
 ## Desenvolvido com as tecnologias
 - Raspberry pi 3
-- Python3
-- Javascript
-- Node
-- Node Red
+- Python - versão 3
+- Javascript- es6
+- Node js - 10.17.0
+- Node Red - versão 1.0.2
 
 ### Raspberry pi 3
 > Responsável por gerenciar o sistema
