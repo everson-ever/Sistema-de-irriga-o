@@ -38,6 +38,6 @@
 
 # Imagens da aplicação
 - Tela de cadastro de novo agendamento
-<img src="https://github.com/EversonSilva9799/Sistema-de-irriga-o/blob/master/screenshot%20application/cadastro%20agendamentos.png" width="400" height="400">
+<img src="https://github.com/EversonSilva9799/Sistema-de-irriga-o/blob/master/screenshot%20application/cadastro%20agendamentos.png" width="400">
 
 ![](https://github.com/EversonSilva9799/Sistema-de-irriga-o/blob/master/screenshot%20application/agendamentos.png)
