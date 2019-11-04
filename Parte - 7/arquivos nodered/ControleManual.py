@@ -26,35 +26,26 @@ class ControleManual():
         horaAtual = horaAtual.strftime('%H:%M')
         
         for index, valvula in enumerate(valvulas):
-            valvulaCadastradaDic = self.classdadosValvula.converterDadoDic(valvula)
+            valvula = self.classdadosValvula.converterDadoDic(valvula)
 
-            if int(valvulaCadastradaDic['valvula']) == int(valvulaLigar) and int(valvulaCadastradaDic['status']) == 0:
+            if int(valvula['valvula']) == int(valvulaLigar) and int(valvula['status']) == 0:
                 
                 self.valvula.ligar(int(valvulaLigar))
 
-                valvula = {}
-                valvula['id'] = valvulaCadastradaDic['id']
-                valvula['valvula'] = valvulaCadastradaDic['valvula']
                 valvula['status'] = 1
-                valvula['secao'] = valvulaCadastradaDic['secao']
                 valvula['desligadoManualmente'] = 0
-
-                valvula = self.classdadosValvula.converterDadoJson(valvula)
 
                 configuracoes = self.classConfiguracoes.dadosGravados()
                 configuracoes = self.classConfiguracoes.converterDadoDic(configuracoes[0])
-    
                 tempoDesligamento = int(configuracoes['tempoPadrao'])
 
-
                 horaDesligar = self.calculaHoraDesligar(horaAtual, tempoDesligamento)
-                
-                
-                self.classdadosValvula.atualizar(valvula)
-                valvula = self.classdadosValvula.converterDadoDic(valvula)
-                self.logCadastrado = self.classLog.registrarLog(valvulaCadastradaDic['secao'], horaAtual, horaDesligar, "Manual")
-       
 
+                self.logCadastrado = self.classLog.registrarLog(valvula['secao'], horaAtual, horaDesligar, "Manual")
+                
+                valvula = self.classdadosValvula.converterDadoJson(valvula)
+                self.classdadosValvula.atualizar(valvula)
+                
                 
                 valvulaLigada = True
                 while valvulaLigada:
@@ -63,9 +54,9 @@ class ControleManual():
                     valvulas = self.classdadosValvula.dadosGravados()
 
                     for index, valvula in enumerate(valvulas):
-                        valvulaCadastradaDic = self.classdadosValvula.converterDadoDic(valvula)
+                        valvula = self.classdadosValvula.converterDadoDic(valvula)
 
-                        if int(valvulaCadastradaDic['valvula']) == int(valvulaLigar) and int(valvulaCadastradaDic['status']) == 0:
+                        if int(valvula['valvula']) == int(valvulaLigar) and int(valvula['status']) == 0:
                             
                             valvulaLigada = False
                             break
@@ -89,22 +80,15 @@ class ControleManual():
         horaAtual = horaAtual.strftime('%H:%M')
 
         for index, valvula in enumerate(valvulas):
-            valvulaCadastradaDic = self.classdadosValvula.converterDadoDic(valvula)
+            valvula = self.classdadosValvula.converterDadoDic(valvula)
 
-            if int(valvulaCadastradaDic['valvula']) == int(valvulaDesligar) and int(valvulaCadastradaDic['status']) == 1:
+            if int(valvula['valvula']) == int(valvulaDesligar) and int(valvula['status']) == 1:
                 
-                self.valvula.desligar(int(valvulaDesligar))
-                
-                valvula = {}
-                valvula['id'] = valvulaCadastradaDic['id']
-                valvula['valvula'] = valvulaCadastradaDic['valvula']
+                self.valvula.desligar(int(valvulaDesligar))   
                 valvula['status'] = 0
-                valvula['secao'] = valvulaCadastradaDic['secao']
                 valvula['desligadoManualmente'] = 1
 
-                valvula = self.classdadosValvula.converterDadoJson(valvula)
-
-                
+                valvula = self.classdadosValvula.converterDadoJson(valvula)              
                 self.classdadosValvula.atualizar(valvula)
 
 
