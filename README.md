@@ -40,5 +40,16 @@
 - Tela de cadastro de novo agendamento
 <img src="https://github.com/EversonSilva9799/Sistema-de-irriga-o/blob/master/screenshot%20application/cadastro%20agendamentos.png" width="380">
 
+- Tela de Agendamentos
 <img src="https://github.com/EversonSilva9799/Sistema-de-irriga-o/blob/master/screenshot%20application/agendamentos.png" width="380">
+
+-Tela de válvulas
+<img src="https://github.com/EversonSilva9799/Sistema-de-irriga-o/blob/master/screenshot%20application/valvulas.png" width="380">
+
+- Tela de tempo padrão
+<img src="https://github.com/EversonSilva9799/Sistema-de-irriga-o/blob/master/screenshot%20application/tempo%20padrao.png" width="380">
+
+- Tela de logs
+<img src="https://github.com/EversonSilva9799/Sistema-de-irriga-o/blob/master/screenshot%20application/logs.png" width="380">
+
 
