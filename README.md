@@ -21,11 +21,11 @@
 
 
 ## Desenvolvido com as tecnologias
-- Raspberry pi 3
-- Python - versão 3
-- Javascript- es6
-- Node js - 10.17.0
-- Node Red - versão 1.0.2
+- [Raspberry pi 3](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
+- [Python - versão 3](https://www.python.org/downloads/)
+- [Javascript- es6](https://www.w3schools.com/js/js_es6.asp)
+- [Node js - 10.17.0](https://nodejs.org/en/)
+- [Node Red - versão 1.0.2](https://nodered.org/)
 
 ### Raspberry pi 3
 > Responsável por gerenciar o sistema
