@@ -5,6 +5,8 @@
 - Deletar agendamentos **OK**
 - Editar um agendamento **OK**
 - Ativar e Desativar Válvula automaticamente de acordo com o agendamento **OK**
+- Ativar válvula que não foi ativado no horário espera (iniciação atrasada) **OK**
+- Reativar válvula que estava em execução mas a execução foi interrompida antes do horário de desligar **OK**
 - Desativar um agendamento para não ser ativado no horário agendado **OK**
 - Ativar e Desativar válvula manualmente **OK**
 - Tempo padrão para desligar uma válvula acionada manualmente editável **OK**
