@@ -34,3 +34,7 @@
 ### Node red
 > Ferramenta utlizada para comunicar a interface do sistema de irrigação com os
 > módulos do raspberry
+
+
+## Imagens da aplicação
+![](https://github.com/EversonSilva9799/Sistema-de-irriga-o/blob/master/screenshot%20application/agendamentos.png)
