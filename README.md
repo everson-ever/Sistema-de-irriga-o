@@ -4,11 +4,11 @@
 - Cadastro de agendamentos **OK**
 - Deletar agendamentos **OK**
 - Editar um agendamento **OK**
-- Ativar e Desativar Válvula automaticamente de acordo com o agendamento **OK**
-- Ativar válvula que não foi ativado no horário esperado (iniciação atrasada) **OK**
-- Reativar válvula que estava em execução mas a execução foi interrompida antes do horário de desligar **OK**
-- Desativar um agendamento para não ser ativado no horário agendado **OK**
-- Ativar e Desativar válvula manualmente **OK**
+- Ligar e Desligar Válvula automaticamente de acordo com o agendamento **OK**
+- Ligar válvula que não foi ativado no horário esperado (iniciação atrasada) **OK**
+- Religar válvula que estava em execução mas a execução foi interrompida antes do horário de desligar **OK**
+- Desativar um agendamento para não ser ligado no horário agendado **OK**
+- Ligar e Desligar válvula manualmente **OK**
 - Tempo padrão para desligar uma válvula acionada manualmente editável **OK**
 - Gerar Log dos acionamentos **OK**
 - Pesquisar nos logs (acionamentos do dia e entre datas) **OK**
