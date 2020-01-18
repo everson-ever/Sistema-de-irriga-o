@@ -11,9 +11,6 @@ class Log:
 
 
 
-
-
-
     def registrarLog(self, valvula, inicio, fim, modo):
 
 

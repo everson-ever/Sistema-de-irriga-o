@@ -10,7 +10,6 @@ class BancoDados():
         self.validaDados = ValidaDados()
         self.arquivo = arquivo
         self.dadosGravados()
-        self.ultimoHorario = 0
 
 
     ## Retorna os dados gravados no sistema - somente leitura
@@ -33,7 +32,8 @@ class BancoDados():
     ##      dado: Um dado - formato: json
     ##}
     def _pegarIdDado(self, dado):    
-        dado = json.loads(dado)    
+        #dado = json.loads(dado)    
+        dado = self.converterDadoDic(dado);
         return dado['id']
 
     ## Converte um dado que está em formato json para dicionário python
@@ -91,7 +91,11 @@ class BancoDados():
         dado = self.converterDadoJson(dado)
 
         self.atualizar(dado)
-        
+
+    def salvarArquivo(self, dadosCadastrados):
+        arq = open(self.arquivo, 'w')
+        arq.write('\n'.join(dadosCadastrados).replace('\n', '').replace('}', '}\n'))
+        arq.close()
 
     ## Cadastrar um novo dado
     ## params : {
@@ -136,7 +140,10 @@ class BancoDados():
     ##      dados: Id do dado - number
     ##}
     def deletar(self, dados):
-        if type(dados) == list:
+
+        if str(dados).isdigit():
+            dados = [dados]
+
             for dado in dados:
                 try:
 
@@ -154,9 +161,7 @@ class BancoDados():
                     
                         del dadosCadastrados[indexDado]
 
-                        arq = open(self.arquivo, 'w')
-                        arq.write('\n'.join(dadosCadastrados).replace('\n', '').replace('}', '}\n'))
-                        arq.close()
+                        self.salvarArquivo(dadosCadastrados)
 
                     else:
                         return False
@@ -165,35 +170,6 @@ class BancoDados():
                     return False
                 except OSError:
                     return False
-                              
-        elif str(dados).isdigit():
-            try:
-
-                ## Buscando o dado cadastrado no banco
-                dadosCadastrados = self.dadosGravados()
-                indexDado = self._procurarDadoBanco(dadosCadastrados, dados)
-
-                if indexDado == None:
-                    return False
-                
-
-                if indexDado >= 0:
-                
-                    del dadosCadastrados[indexDado]
-
-                    arq = open(self.arquivo, 'w')
-                    arq.write('\n'.join(dadosCadastrados).replace('\n', '').replace('}', '}\n'))
-                    arq.close()
- 
-                    return True
-                else:
-                    return False
-                    
-            except IndexError:
-                return False
-            
-            except OSError:
-                return False
 
 
     
@@ -202,6 +178,9 @@ class BancoDados():
         
         dado = self.converterDadoDic(dado)
         dadoId = dado['id']
+
+        if(not self.validaDados.validar(dado)):
+            return False
 
         indexDado = self._procurarDadoBanco(dadosCadastrados, dadoId)
 
@@ -212,8 +191,7 @@ class BancoDados():
             dado = self.converterDadoJson(dado)
             dadosCadastrados[indexDado] = dado
             
-            arq = open(self.arquivo, 'w')
-            arq.write('\n'.join(dadosCadastrados).replace('\n', '').replace('}', '}\n'))
-            arq.close()
+            self.salvarArquivo(dadosCadastrados)
+            
             return dado
         return False

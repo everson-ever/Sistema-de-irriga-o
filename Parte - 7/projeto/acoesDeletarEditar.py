@@ -6,7 +6,7 @@ classAgendamentos = BancoDados('agendamentos.json')
 
 dados = sys.argv[1]
 dados = dados.split(',')
-
+print(dados)
 acao = dados.pop(-1)
 
 
@@ -36,6 +36,7 @@ elif acao == 'editar':
 
 elif acao == 'situacao':
     dado = dados
+    print(dado)
     agendamento = classAgendamentos.pegarDadoBanco(dado[0])
 
     agendamento['ativado'] = dados[1]

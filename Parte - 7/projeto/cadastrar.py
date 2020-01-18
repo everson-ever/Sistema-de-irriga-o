@@ -1,6 +1,7 @@
-from BancoDados import BancoDados
-import sys
 import json
+import sys
+
+from BancoDados import BancoDados
 
 classAgendamentos = BancoDados('agendamentos.json')
 
@@ -15,8 +16,7 @@ h['valvula'] = dado[2]
 h['status'] = 0
 h['ativado'] = 1
 
-dado = json.dumps(h)
+
+#dado = json.dumps(h)
+dado = classAgendamentos.converterDadoJson(h)
 classAgendamentos.cadastrar(dado)
-
-
-

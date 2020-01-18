@@ -11,6 +11,7 @@ dados = dados.split(',')
 valvula = dados[0]
 acao = dados[1]
 
+
 if acao == 'ligar':
     controleManual.ligar(valvula)
 

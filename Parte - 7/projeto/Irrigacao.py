@@ -20,8 +20,8 @@ class Irrigacao():
         self.statusHorarios = []
         self.statusAgendamentosAtivados = []
         self.horariosPendentes = []
-        self.pendentes = []
         self._formatarHorarios()
+        
         #self._iniciaListaItensPendentes()
 
 
@@ -46,8 +46,6 @@ class Irrigacao():
                
         for index, horarioPendente in enumerate(self.horariosPendentes):
             try:
-
-                #if self.horariosPendentes[i] == 0 and self.statusHorarios[i] == 1:
                 if not (horarioPendente['id'] in self.ids):
                     del self.horariosPendentes[index]   
    
@@ -75,6 +73,7 @@ class Irrigacao():
         horarioDesligar = horarioDesligar.strftime('%H:%M')
 
         return horarioDesligar
+
 
     ## Método para pegar o json(horario) e separar horas a ligar e tempos ligado em duas lista
     ## em que a posição de um horário e seu tempo ligado será a mesma
@@ -115,6 +114,15 @@ class Irrigacao():
             horaAtual = datetime.now()
             horaAtual = horaAtual.strftime('%H:%M')
 
+            # print("Ligar: ", self.horariosLigar)
+            # print("Desligar: ", self.horariosDesligar)
+            # print("Horários Pendentes: ", self.horariosPendentes)
+            # print("Status: ", self.statusHorarios)
+            # print("ids: ", self.ids)         
+            # print()
+
+            time.sleep(2)
+
 
             for index, horario in enumerate(self.horariosLigar):
                 valvulaAtual = int(self.valvulas[index])
@@ -132,7 +140,7 @@ class Irrigacao():
 
 
                 # Desliga a valvula quando estiver na hora
-                if horaAtual >= self.horariosDesligar[index] and self.statusHorarios[index] == 1:
+                if horaAtual >= self.horariosDesligar[index] and self.statusHorarios[index] == str(1):
                     self.classAgendamentos.alterarStatus(index,0)
                     self.horariosPendentes[index]['pendente'] = 1
                     

@@ -19,7 +19,6 @@ class ControleManual():
 
     def ligar(self, valvulaLigar):
 
-
         valvulas = self.classdadosValvula.dadosGravados()
 
         horaAtual = datetime.now()
@@ -56,8 +55,7 @@ class ControleManual():
                     for index, valvula in enumerate(valvulas):
                         valvula = self.classdadosValvula.converterDadoDic(valvula)
 
-                        if int(valvula['valvula']) == int(valvulaLigar) and int(valvula['status']) == 0:
-                            
+                        if int(valvula['valvula']) == int(valvulaLigar) and int(valvula['status']) == 0:          
                             valvulaLigada = False
                             break
                     
@@ -90,8 +88,6 @@ class ControleManual():
 
                 valvula = self.classdadosValvula.converterDadoJson(valvula)              
                 self.classdadosValvula.atualizar(valvula)
-
-
 
 
     def calculaHoraDesligar(self, horarioLigar, minutosLigado):
